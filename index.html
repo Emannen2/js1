@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme</title>
+    <script defer src="/input.js"></script>
+    <script defer src="/buttonClick.js"></script>
+    <link rel="stylesheet" href="/css/bulma.css" />
+    <script defer src="/show.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <body>
+        <div class="projectDiv">
+            <div class="columns has-text-centered">
+                <div class="box hero is-link column is-one-third container has-text-centered mt-6">
+                    <form class="column ">
+                        <div class="field">
+                          <div class="control">
+                            <input class="input" id="inputValue" type="text" placeholder="Enter a theme">
+                          </div>
+                        </div>
+                        <button onclick="addToArray(), updateList()" class="button is-primary">Add to List</button>
+                        <button onclick="deleteFromArray(), updateList()" class="button is-danger">Delete from List</button>
+                        <button onclick="clearArray()" class="button is-danger">Clear List</button>
+                      </form>
+                      <ul id="input-list">
+                      </ul>
+              
+                      <div class="box hero is-halfheight">
+                          <ul id="myList"></ul>
+                      </div>
+                </div>
+        
+                <div class="box hero is-link column is-one-third container mt-6">
+                    <form class="column">
+                        <div class="field">
+                          <div class="control">
+                            <input class="input" id="inputValue2" type="text" placeholder="Enter a person">
+                          </div>
+                        </div>
+                        <button onclick="addToArray2(), updateList2()" class="button is-primary">Add to List</button>
+                        <button onclick="deleteFromArray2(), updateList2()" class="button is-danger">Delete from List</button>
+                        <button onclick="clearArray2()" class="button is-danger">Clear List</button>
+                      </form>
+                      <ul id="input-list">
+                      </ul>
+              
+                      <div class="box hero is-halfheight">
+                          <ul id="themeList"></ul>
+                      </div>
+                </div>
+            </div>
+    
+        </div>
+        
+
+
+        <div class="projectDiv" style="display:none">
+            <div class="box hero is-primary is-halfheight column is-one-third container">
+                <h1 class="title container">
+                    After Work Generator
+                </h1>
+                <div class="columns">
+                    <div class="box hero is-medoium column is-one-third container mb-6">
+                        <h1 id="outputH1"></h1>
+                    </div>
+                    <div class="box hero is-medium column is-success is-one-third container mb-6">
+                        <h1 id="themeOutput"></h1>
+                    </div>
+                    <div class="box hero is-medium column is-one-third container mb-6">
+                        <h1 id="name2Output"></h1>
+                    </div>
+                </div>
+                <div class="columns">
+                    <button onclick="getRandomTheme(), getRandomName2(), getRandomName()" class="buttonProject button is-link is-outlined column container has-text-centered is-one-quarter subtitle">Generate</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="box hero is-link column is-one-fifth container has-text-centered mt-6">
+            <button id="projectBtn" class="buttonProject button is-primary subtitle">Done</button>
+        </div>
+        
+  </body>
+</html>
